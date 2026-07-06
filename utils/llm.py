@@ -1,7 +1,15 @@
-"""
-LLM Client
+from dotenv import load_dotenv
+from langchain_google_genai import ChatGoogleGenerativeAI
 
-This module wraps the Google Generative AI API, providing a unified interface
-for sending prompts, receiving completions, and managing conversation context
-during the data analysis workflow.
-"""
+load_dotenv()
+
+
+def get_llm():
+    """
+    Returns a configured Gemini model.
+    """
+
+    return ChatGoogleGenerativeAI(
+        model="gemini-2.5-flash",
+        temperature=0
+    )

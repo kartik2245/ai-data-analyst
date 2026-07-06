@@ -1,79 +1,172 @@
-# AI Data Analyst
+# 📊 AI Data Analyst
 
-An intelligent data analysis application powered by Python and large language models. Upload datasets, ask questions in natural language, and receive automated insights, visualizations, and structured reports.
+An AI-powered data analysis application built with Streamlit, Pandas, LangChain, and Google's Gemini model. The application allows users to upload a CSV dataset, ask questions in natural language, generate charts, clean data, and receive AI-generated insights without writing Python code.
 
-## Project Description
+The goal of this project was to simplify exploratory data analysis by combining large language models with Python-based data processing into a single interactive application.
 
-AI Data Analyst is designed to streamline the end-to-end data analysis workflow. Users provide raw data files, and the application handles loading, cleaning, exploratory analysis, chart generation, and narrative report creation — all orchestrated through an LLM-driven analyst interface.
+---
 
-## Folder Structure
+## Features
 
-```
-ai-data-analyst/
-│
-├── app.py                  # Application entry point
-├── requirements.txt        # Python dependencies
-├── README.md               # Project documentation
-├── .gitignore              # Git ignore rules
-├── .env.example            # Environment variable template
-│
-├── data/                   # Input datasets (CSV, Excel, etc.)
-├── reports/                # Generated analysis reports
-├── assets/                 # Static assets (images, templates)
-├── prompts/                # LLM prompt templates
-│   └── analyst_prompt.py
-│
-├── utils/                  # Core utility modules
-│   ├── data_loader.py      # Dataset loading and validation
-│   ├── data_cleaner.py     # Data cleaning and preprocessing
-│   ├── visualizer.py       # Chart and plot generation
-│   ├── llm.py              # LLM client and interaction layer
-│   └── report_generator.py # Report assembly and export
-│
-└── models/                 # Data models and schemas
-```
+- Upload and analyze CSV datasets
+- AI-powered natural language querying
+- Automatic Pandas code generation
+- Interactive data visualization
+- AI-generated dataset insights
+- Data cleaning using natural language
+- Download cleaned datasets
+- Export generated charts as PNG
+- Generate downloadable PDF reports
+- Dataset health summary
+- Conversation memory during analysis
+
+---
 
 ## Tech Stack
 
-- **Language:** Python 3.10+
-- **LLM Provider:** Google Generative AI (Gemini)
-- **Data Processing:** pandas, numpy
-- **Visualization:** matplotlib, seaborn, plotly
-- **Environment Management:** python-dotenv
+**Frontend**
+- Streamlit
 
-## Setup Instructions
+**Backend**
+- Python
 
-1. **Clone the repository**
+**Libraries**
+- Pandas
+- Matplotlib
+- ReportLab
+- LangChain
+- Google Gemini API
 
-   ```bash
-   git clone <repository-url>
-   cd ai-data-analyst
-   ```
+---
 
-2. **Create a virtual environment**
+## Project Structure
 
-   ```bash
-   python -m venv venv
-   source venv/bin/activate        # macOS / Linux
-   venv\Scripts\activate         # Windows
-   ```
+```
+AI-Data-Analyst/
+│
+├── app.py
+├── requirements.txt
+├── assets/
+├── data/
+├── models/
+├── prompts/
+├── reports/
+├── ui/
+└── utils/
+```
 
-3. **Install dependencies**
+---
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Installation
 
-4. **Configure environment variables**
+Clone the repository
 
-   ```bash
-   cp .env.example .env
-   ```
+```bash
+git clone https://github.com/yourusername/AI-Data-Analyst.git
+```
 
-   Edit `.env` and set your `GOOGLE_API_KEY`.
+Move into the project
 
-5. **Run the application**
+```bash
+cd AI-Data-Analyst
+```
 
-   ```bash
-   python app.py
-   ```
+Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+Activate it
+
+Windows
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Create a `.env` file and add your Gemini API key
+
+```text
+GOOGLE_API_KEY=YOUR_API_KEY
+```
+
+Run the application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## Example Questions
+
+You can ask questions such as:
+
+- What is the average salary?
+- Show a histogram of Amount.
+- Remove duplicate rows.
+- Fill missing values with median.
+- Show the top 10 highest sales.
+- Count employees older than 30.
+- Generate AI insights for this dataset.
+
+---
+
+## Screenshots
+
+Screenshots will be added here.
+
+- Home Page
+- AI Analysis
+- Data Cleaning
+- Charts
+- AI Insights
+- PDF Report
+
+---
+
+## What I Learned
+
+While building this project, I learned how to:
+
+- Build AI-powered applications using LangChain
+- Work with Gemini for structured JSON responses
+- Generate and execute dynamic Pandas code
+- Build conversational data analysis workflows
+- Handle AI-generated visualizations
+- Generate PDF reports programmatically
+- Design a modular Python project structure
+
+---
+
+## Future Improvements
+
+Some ideas that can be added in future versions:
+
+- Support for Excel files
+- Multiple dataset analysis
+- SQL database integration
+- Interactive dashboards
+- More visualization options
+- User authentication
+- Chat history export
+
+---
+
+## Author
+
+**Kartik Marjara**
+
+GitHub: https://github.com/kartik2245
+
+LinkedIn: www.linkedin.com/in/kartik-marjara-11006017a
+---
+
+If you found this project interesting, feel free to fork it, raise an issue, or share your feedback.
